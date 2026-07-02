@@ -5,6 +5,14 @@
 pip install paramiko textual python-dotenv
 ```
 
+## Libraries used
+
+| Library | Purpose |
+|---|---|
+| [`paramiko`](https://www.paramiko.org/) | Handles the SSH connections to each Pi — opens the session, runs commands (`exec_command`), and streams stdout/stderr back over a channel. Also used to send input (Continue button) and Ctrl+C (Stop button) directly into the running remote process via the same channel. |
+| [`textual`](https://textual.textualize.io/) | The TUI framework — renders the whole dashboard (jig columns, stage panels, buttons, inputs, live log widgets) and handles layout, styling (via `dashboard.tcss`), and event handling (button clicks, input submission). Also provides the background worker system (`@work(thread=True)`) used to run blocking SSH calls off the main UI thread. |
+| [`python-dotenv`](https://pypi.org/project/python-dotenv/) | Loads connection credentials (host, user, key path) from a `.env` file into environment variables at startup, so secrets stay out of `config.py` and out of version control. |
+
 **Configure environment variables**
 
 Copy the template and fill in real values:
