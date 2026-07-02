@@ -1,0 +1,79 @@
+Screen {
+    background: $surface;
+}
+
+#jig-row {
+    padding: 1 2;
+}
+
+.jig-column {
+    width: 1fr;
+    padding: 0 1;
+    border: round $accent;
+    margin-right: 1;
+}
+
+.jig-title {
+    text-style: bold;
+    text-align: center;
+    padding: 1 0;
+}
+
+.conn-status {
+    text-align: center;
+    padding-bottom: 1;
+}
+
+.stage-panel {
+    border: round $primary;
+    margin-bottom: 1;
+    height: auto;
+    padding: 0 1;
+}
+
+.stage-header {
+    height: auto;
+    align: left middle;
+}
+
+.stage-title {
+    width: 1fr;
+    padding: 0 1;
+    text-style: bold;
+}
+
+.status-pending {
+    color: $text-muted;
+}
+
+.status-running {
+    color: $warning;
+}
+
+.status-passed {
+    color: $success;
+}
+
+.status-failed {
+    color: $error;
+}
+
+Button {
+    margin: 0 1;
+}
+
+RichLog {
+    height: 8;
+    border: solid $panel;
+    background: $panel-darken-1;
+}
+
+.stage-input-row {
+    height: auto;
+    align: left middle;
+    padding-top: 1;
+}
+
+.stage-input-row Input {
+    width: 1fr;
+}
